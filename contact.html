@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: linear-gradient(135deg, #007bff, #00d4ff);
+        color: #fff;
+        padding: 20px;
+    }
+  header {
+          background-color: linear-gradient(135deg, #007bff, #00d4ff);
+            text-align:right;
+            color: white;
+            padding: 18px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+    .about {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .box {
+        max-width: 350px;
+        margin: auto;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.25);
+        color: #fff;
+    }
+
+    button {
+        width: 48%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #000000aa;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: black;
+    }
+
+    .btn-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+h1,h2{
+color:yellow;
+}
+</style>
+
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Resume.html">RESUME</a>
+        <a href="contact.html">CONTACT US</a>
+    </nav>
+</header>
+<br>
+
+<h1> <center> ABOUT </center> </h1>
+<br> <br>
+<div class="about">
+Hi, I am Ganeshram. I'm a web Developer.<br>
+I see myself as a cofident person who can overcome among worst and toughest situations.
+And dare to face the problems with my skills and ideas.
+On a personal with my skils and ideas.
+On a personal front, I make friends easily and obey superiors.</div>
+
+<div class="box">
+    <h2 style="text-align:center;">Contact Us</h2>
+
+    <form id="myForm" autocomplete>
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <textarea id="message" placeholder="Enter Message" required></textarea>
+
+        <div class="btn-row">
+            <button type="button" onclick="submitForm()">SUBMIT</button>
+            <button type="reset">RESET</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function submitForm() {
+        alert("Your message has been submitted!");
+        document.getElementById("myForm").reset();
+    }
+</script><center>
+<h1 style="color:red">THANKYOU!<h1></center>
+<p>
+    <center>
+        <a href="https://www.instagram.com/ganesh__ram_07?utm_source=qr&igsh=d3dtN3RvdHc0NW5w">
+            <i class="fa-brands fa-instagram" style="font-size :2rem;  color:lightpurple;"></i>
+        </a>&nbsp;         &nbsp;
+        <a href="https://www.linkedin.com/in/ganeshram-s-534b20371">
+           <i class="fa-brands fa-linkedin" style="font-size :2rem;  color: blue;"></i>
+        </a> &nbsp;    &nbsp;
+        <a href="mailto:example@email.com">
+           <i class="fa-regular fa-message" style="font-size :2rem;  color:red;"></i>        </a>    &nbsp; &nbsp;
+<a href="https://wa.me/8248703979"> 
+<i class="fa-brands fa-whatsapp" style="font-size :2rem; color:green;"></i> 
+ </a>
+
+    </center>
+</p>
+
+</body>
+</html>

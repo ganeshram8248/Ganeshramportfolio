@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f2027;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .portfoliosection {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .button {
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+            float: right;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .logo {
+            font-size: 36px;
+            color: white;
+            text-align:left;
+            margin: 20px 0;
+        }
+
+        .logo span {
+            color: #40a4ff;
+        }
+
+        .animation-container {
+            text-align: center;
+            position: relative;
+        }
+
+        /* Styling for Hello and H1 */
+        .hello {
+            font-size: 34px;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideInFromLeft 1.5s forwards ease-out;
+            color: #FF6347; /* Attractive Color for Hello */
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #40a4ff;
+            font-weight: bold;
+            margin-top: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .para {
+            font-size: 1.8em;
+            opacity: 0;
+            transform: translateY(100%);
+            animation: slideInFromBottom 1.5s forwards ease-out 0.5s;
+            color: #FFD700; /* Gold color for description */
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background-color: #0f2027;
+            text-align: right;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: lightgreen;
+        }
+
+        .circle-image {
+            height: 350px;
+            width: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .sidetext {
+            font-size: 20px;
+            color: white;
+            text-align: right;
+        }
+
+        .box {
+            font-size: 35px;
+            color: lightgreen;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfoliosection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .circle-image {
+                height: 250px;
+                width: 250px;
+            }
+
+            .hello {
+                font-size: 22px;
+            }
+
+            .para {
+                font-size: 1.5em;
+            }
+
+            .box {
+                font-size: 30px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 10px;
+            }
+
+            .button {
+                float: none;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<a href="resume.html"> <button class="button">DOWNLOAD RESUME</button> </a>
+
+
+<div class="logo">PORT<span>FOLIO</span></div>
+<header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Resume.html">RESUME</a>
+        <a href="contact.html">CONTACT US</a>
+    </nav>
+</header>
+<br>
+<div class="box">WEB DESIGNER & WEB DEVELOPER</div>
+<br>
+<div class="portfoliosection">
+    <div>
+        
+        <img src="ganeshphoto.JPG" alt="circular-image" class="circle-image">
+    </div>
+    <div class="animation-container">
+        <h2 class="hello">Hello! I am</h2>
+        <h1>GANESHRAM S</h1>
+     <p class= "para" style="color:white"> I am Webdeveloper ,creative thinker ,beautiful designer and functionalwebsites</p></div>
+</div>
+
+<p>
+    <center>
+        <a href="https://www.instagram.com/ganesh__ram_07?utm_source=qr&igsh=d3dtN3RvdHc0NW5w">
+            <i class="fa-brands fa-instagram" style="font-size :2rem;  color:lightpurple;"></i>
+        </a>&nbsp;         &nbsp;
+        <a href="https://www.linkedin.com/in/ganeshram-s-534b20371">
+           <i class="fa-brands fa-linkedin" style="font-size :2rem;  color: lightblue;"></i>
+        </a> &nbsp;    &nbsp;
+        <a href="mailto:example@email.com">
+           <i class="fa-regular fa-message" style="font-size :2rem;  color:red;"></i>        </a>    &nbsp; &nbsp;
+<a href="https://wa.me/8248703979"> 
+<i class="fa-brands fa-whatsapp" style="font-size :2rem; color:green;"></i> 
+ </a>
+
+    </center>
+</p>
+
+</body>
+</html>

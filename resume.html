@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ganeshram S — Resume</title>
+
+  
+  <style>
+header {
+          background-color: linear-gradient(135deg, #007bff, #00d4ff);
+            text-align:right;
+            color: white;
+            padding: 18px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #DF3C5F;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: green;
+        }
+
+    
+    * { 
+box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+    body {
+ font-family: Arial, Helvetica, sans-serif;
+ line-height: 1.45; 
+color: #98B4D4;
+ background: lightblue;
+ padding: 16px; 
+}
+
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+
+    
+    aheader { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid #e6eef6; }
+    .name {
+ font-size: 20px; 
+font-weight: 700;
+color:#DC143C }
+    .subtitle { color: #556; font-size: 14px; }
+
+    
+    .main { display: block; padding: 18px; }
+    @media (min-width: 780px) {
+      .main { display: grid; grid-template-columns: 280px 1fr; gap: 20px; }
+    }
+
+    
+    .sidebar { padding-right: 8px; border-right: none; }
+    @media (min-width: 780px) { .sidebar { border-right: 1px solid #eef2f7; padding-right: 24px; } }
+    .section-title { font-size: 12px; color: #6b7280; margin-top: 12px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .8px; }
+
+    ul.contact { list-style: none; }
+    ul.contact li { margin-bottom: 8px; font-size: 14px; color: #333; }
+
+    .skill { display:inline-block; padding:6px 10px; margin:6px 6px 0 0; background:#eef6ff; border-radius:999px; font-size:13px; color:#0b63d6; }
+
+       .content h2 { font-size: 16px; margin-bottom: 8px; }
+    .content p { color: #333; margin-bottom: 12px; }
+    .project { border-left: 3px solid #e6f0ff; padding: 8px 12px; margin-bottom: 10px; border-radius:6px; background: #fbfdff; }
+
+    
+    footer { 
+padding: 14px 18px; 
+text-align: center;
+ color:#6b7280;
+ font-size:13px; 
+border-top:1px solid #eef2f7; 
+}
+
+    
+    @media print {
+      body { 
+background: white; 
+}
+      .container { 
+box-shadow: none; 
+border-radius: 0; }
+    }
+
+    
+    .btn { display:inline-block; background:#0b63d6; color:white; padding:8px 12px; border-radius:6px; text-decoration:none; font-size:14px; }
+  </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Resume.html">RESUME</a>
+        <a href="contact.html">CONTACT US</a>
+    </nav>
+</header>
+
+  <div class="container" role="document" aria-label="Resume for Ganeshram S">
+   
+    <aheader>
+      <div>
+        <div class="name">Ganeshram S</div>
+        <div class="subtitle">B.Sc. IT Student — Web Developer</div>
+      </div>
+
+         <div>
+        <button class="btn" onclick="downloadResume()">DownloadResume</button>
+      </div>
+    </aheader>
+
+   
+    <div class="main">
+    
+      <aside class="sidebar" aria-label="Contact and skills">
+        <div class="section">
+          <div class="section-title">Contact</div>
+          <ul class="contact">
+            <li><strong>Email:</strong> ganeshram8248@gmail.com</li>
+            <li><strong>Phone:</strong> +91  8248703979</li>
+            <li><strong>Location:</strong> Maduari</li>
+            <li><strong>Portfolio:</strong> ganeshramportfolio.com</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Skills</div>
+          <div>
+            
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JAVASCRIPT</span>
+            <span class="skill">JAVA</span>
+            <span class="skill">FIGMA(Tools)</span>
+            <span class="skill">ADVANCE EXCEL</span>
+            <span class="skill"></span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Tools</div>
+          <p style="font-size:14px; color:#333;">VS Code, Github , FigmaTools</p>
+        </div>
+      </aside>
+
+     <section class="content" aria-label="Main resume content">
+        <div>
+          <h2>Professional Summary</h2>
+          <p>I am currently studying for a Bachelor of Science in Information Technology. I have experience building websites and solving algorithm problems, and I am comfortable working with Java, C/C++, JavaScript, and fundamental web technologies. I am eager to learn and build real-world applications to further develop my skills and knowledge.
+          </p>
+        </div>
+
+        <div>
+          <h2>Education</h2>
+          <p><strong>The American College</strong> — Bachelor of Science in Information Technology (B.Sc.IT)<br>Currently pursuing.</p>
+        </div>
+      </section>
+    </div>
+
+      </div>
+  
+<script>
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'Ganeshram S resume.pdf';    
+    link.download = 'Ganeshram S resume.pdf'; 
+    link.click();
+
+}
+</script>
+</body>
+</html>

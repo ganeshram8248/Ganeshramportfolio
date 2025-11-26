@@ -1,0 +1,155 @@
+<!DOCTYPE.html>
+<html>
+<head>     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+header {
+          background-color: linear-gradient(135deg, #007bff, #00d4ff);
+            text-align:right;
+            color: white;
+            padding: 18px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+.myprofile
+{
+float:right;
+margin-top: 35px;
+margin-right: 18px;
+width:  155px;
+height: 185px;
+border: 6px solid black;
+border-radius: 8px;
+}
+body{
+background-image:url('port1.WEBP');
+background-repeat: no-repeat;
+background-size: 100%  150%;
+}
+#scrollUpBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 14px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 9999;
+}
+
+#scrollUpBtn:hover {
+    background: #555;
+}
+</style>
+<script>
+window.onscroll = function () {
+    var scrollBtn = document.getElementById("scrollUpBtn");
+
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block"; 
+    } else {
+        scrollBtn.style.display = "none"; 
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Resume.html">RESUME</a>
+        <a href="contact.html">CONTACT US</a>
+    </nav>
+</header>
+
+ <img src="ganesh1.JPG"  alt="my profile"  class="myprofile">
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Ganeshram S </h1>
+<h2>E-mail : ganeshram8248@gmail.com</h2>
+<h2>Contact no : 8248703979</h2>
+<h2>College name : THE AMERICAN COLLEGE</h2>
+<h3>Degree : B.SC(IT) INFORMATION TECHNOLOGY</h3>
+<h3>Father's name: V.Saravanan</h3>
+<h3>Addresses :<br>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;   
+  No 101,Vinayagar street,<br>  &nbsp;  &nbsp; &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp; Moovendar nagar,<br> &nbsp; &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;   B B kulam <br>  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;    &nbsp;  &nbsp;  Maduari-625002.<br></h3>
+<hr>
+<h2>EDUCATION DETAILS:</h2>
+<br>
+<table border="1">
+
+<tr> 
+   <td><b>S NO </b>      &nbsp;   &nbsp; </td> <td>        <b>  QUALIFICATION </b>   &nbsp;   &nbsp;   &nbsp; </td> <td>  <b>    INSTITUTION </b>    &nbsp;   &nbsp;   &nbsp;   &nbsp;</td>  <td> <b>PERCENTAGE </b>    &nbsp;   &nbsp;</td>  
+</tr>
+<tr>
+<td>1</td> <td> SSLC</td> <td>SEVENTHDAY.<br>MATRIC.  <br>  HR.SEC.SCHOOL</td><td>64%</td>
+</tr>
+<tr>
+<td>2</td> <td> HSC</td> <td> ELANGO .CORP.  <br>  HR.SEC.SCHOOL</td><td>70%</td>
+</tr>
+
+<tr>
+<td>3</td> <td> UG</td> <td>THE AMERICAN COLLEGE </td><td>76%</td>
+</tr>
+
+
+</table>
+<h2 >SKILLS:</h1>
+<ul>
+<li>Frondend(HTML,CSS,JAVASCRIPT)</li>
+<li>Excel</li>
+<li>Figmatool </li>
+</ul>
+<h2>DECLARTION</h2>
+<p> I here by declare that all the informations provided above are true.I assure that if i get this job i would do it sincearly.
+
+</p>
+<P>
+Yours Sincearly<br><br>
+Ganeshram S  </P>
+<h1 style="color:red"> <center>  THANKYOU!  </center></h1>
+<button id="scrollUpBtn" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+<p>
+    <center>
+        <a href="https://www.instagram.com/ganesh__ram_07?utm_source=qr&igsh=d3dtN3RvdHc0NW5w">
+            <i class="fa-brands fa-instagram" style="font-size :2rem;  color:lightpurple;"></i>
+        </a>&nbsp;         &nbsp;
+        <a href="https://www.linkedin.com/in/ganeshram-s-534b20371">
+           <i class="fa-brands fa-linkedin" style="font-size :2rem;  color: blue;"></i>
+        </a> &nbsp;    &nbsp;
+        <a href="mailto:example@email.com">
+           <i class="fa-regular fa-message" style="font-size :2rem;  color:red;"></i>        </a>    &nbsp; &nbsp;
+<a href="https://wa.me/8248703979"> 
+<i class="fa-brands fa-whatsapp" style="font-size :2rem; color:green;"></i> 
+ </a>
+
+    </center>
+</p>
+
+</body>
+</html>
