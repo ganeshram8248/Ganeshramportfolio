@@ -4,177 +4,282 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ganeshram S — Resume</title>
-
-  
   <style>
-header {
-          background-color: linear-gradient(135deg, #007bff, #00d4ff);
-            text-align:right;
-            color: white;
-            padding: 18px 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #DF3C5F;
-            margin-left: 20px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: green;
-        }
-
-    
-    * { 
-box-sizing: border-box;
- margin: 0;
- padding: 0;
- }
+    /* Reset and base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
- font-family: Arial, Helvetica, sans-serif;
- line-height: 1.45; 
-color: #98B4D4;
- background: lightblue;
- padding: 16px; 
-}
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #a2c0ff 0%, #f0eaff 100%);
+      color: #3a3a3a;
+      padding: 20px;
+      min-height: 100vh;
+    }
 
-        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    /* Header and navigation */
+    header {
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      padding: 20px 30px;
+      border-radius: 15px 15px 0 0;
+      box-shadow: 0 5px 20px rgba(0,123,255,0.3);
+    }
 
-    
-    aheader { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid #e6eef6; }
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #ff3c60;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    nav a:hover {
+      color: #3cb371; /* green on hover */
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #3cb371;
+      left: 50%;
+      bottom: -5px;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: -8px auto 40px;
+      background: #fff;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding-bottom: 30px;
+    }
+
+    /* Custom header inside container */
+    aheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 30px;
+      border-bottom: 2px solid #eef2f7;
+    }
     .name {
- font-size: 20px; 
-font-weight: 700;
-color:#DC143C }
-    .subtitle { color: #556; font-size: 14px; }
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #dc143c; /* crimson */
+    }
+    .subtitle {
+      color: #556;
+      font-size: 1rem;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+    .btn {
+      background: #0066cc;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 7px 20px rgba(0,102,204,0.4);
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background: #004a99;
+    }
 
-    
-    .main { display: block; padding: 18px; }
+    /* Main layout with sidebar and content */
+    .main {
+      display: block;
+      padding: 24px 30px;
+    }
     @media (min-width: 780px) {
-      .main { display: grid; grid-template-columns: 280px 1fr; gap: 20px; }
+      .main {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+      }
     }
 
-    
-    .sidebar { padding-right: 8px; border-right: none; }
-    @media (min-width: 780px) { .sidebar { border-right: 1px solid #eef2f7; padding-right: 24px; } }
-    .section-title { font-size: 12px; color: #6b7280; margin-top: 12px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .8px; }
+    /* Sidebar styles */
+    .sidebar {
+      border-right: none;
+      padding-right: 0;
+    }
+    @media (min-width: 780px) {
+      .sidebar {
+        border-right: 2px solid #eef2f7;
+        padding-right: 30px;
+      }
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section-title {
+      font-size: 0.85rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      border-left: 4px solid #00b050;
+      padding-left: 10px;
+    }
+    ul.contact {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.contact li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #333;
+      font-weight: 600;
+      border-bottom: 1px dotted #e0e0e0;
+      padding-bottom: 6px;
+    }
 
-    ul.contact { list-style: none; }
-    ul.contact li { margin-bottom: 8px; font-size: 14px; color: #333; }
+    /* Skill pill styling */
+    .skill {
+      display: inline-block;
+      background: #d0e9ff;
+      padding: 8px 14px;
+      margin: 5px 8px 0 0;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0b63d6;
+      box-shadow: 0 3px 8px rgba(11, 99, 214, 0.3);
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .skill:hover {
+      background: #00a0ff;
+      color: white;
+      box-shadow: 0 6px 14px rgba(0,160,255,0.6);
+    }
 
-    .skill { display:inline-block; padding:6px 10px; margin:6px 6px 0 0; background:#eef6ff; border-radius:999px; font-size:13px; color:#0b63d6; }
+    .section p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .project {
+      border-left: 4px solid #d0e9ff;
+      background: #f5faff;
+      padding: 12px 14px;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      color: #222;
+    }
 
-       .content h2 { font-size: 16px; margin-bottom: 8px; }
-    .content p { color: #333; margin-bottom: 12px; }
-    .project { border-left: 3px solid #e6f0ff; padding: 8px 12px; margin-bottom: 10px; border-radius:6px; background: #fbfdff; }
-
-    
-    footer { 
-padding: 14px 18px; 
-text-align: center;
- color:#6b7280;
- font-size:13px; 
-border-top:1px solid #eef2f7; 
-}
-
-    
+    /* Print styles */
     @media print {
-      body { 
-background: white; 
-}
-      .container { 
-box-shadow: none; 
-border-radius: 0; }
+      body {
+        background: white;
+      }
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+      nav, .btn {
+        display: none;
+      }
     }
-
-    
-    .btn { display:inline-block; background:#0b63d6; color:white; padding:8px 12px; border-radius:6px; text-decoration:none; font-size:14px; }
   </style>
 </head>
 <body>
-<header>
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="About.html">ABOUT</a>
-        <a href="resume.html">RESUME</a>
-        <a href="contact.html">CONTACT US</a>
+  <header>
+    <nav role="navigation" aria-label="Primary Navigation">
+      <a href="index.html">HOME</a>
+      <a href="About.html">ABOUT</a>
+      <a href="resume.html">RESUME</a>
+      <a href="contact.html">CONTACT US</a>
     </nav>
-</header>
+  </header>
 
-  <div class="container" role="document" aria-label="Resume for Ganeshram S">
-   
+  <main class="container" role="main" aria-labelledby="resumeTitle">
     <aheader>
       <div>
-        <div class="name">Ganeshram S</div>
+        <div id="resumeTitle" class="name">Ganeshram S</div>
         <div class="subtitle">B.Sc. IT Student — Web Developer</div>
       </div>
-
-         <div>
-        <button class="btn" onclick="downloadResume()">DownloadResume</button>
+      <div>
+        <button class="btn" onclick="downloadResume()" aria-label="Download Resume PDF">Download Resume</button>
       </div>
     </aheader>
 
-   
     <div class="main">
-    
-      <aside class="sidebar" aria-label="Contact and skills">
-        <div class="section">
-          <div class="section-title">Contact</div>
+      
+      <aside class="sidebar" role="complementary" aria-label="Contact and Skills">
+        <section class="section">
+          <h2 class="section-title">Contact</h2>
           <ul class="contact">
-            <li><strong>Email:</strong> ganeshram8248@gmail.com</li>
-            <li><strong>Phone:</strong> +91  8248703979</li>
-            <li><strong>Location:</strong> Maduari</li>
-            <li><strong>Portfolio:</strong> ganeshramportfolio.com</li>
+            <li><strong>Email:</strong> <a href="mailto:ganeshram8248@gmail.com" style="color:#0066cc;">ganeshram8248@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+918248703979" style="color:#0066cc;">+91 8248703979</a></li>
+            <li><strong>Location:</strong> Madurai, India</li>
+            <li><strong>Portfolio:</strong> <a href="https://ganeshramportfolio.com" target="_blank" rel="noopener" style="color:#0066cc;">ganeshramportfolio.com</a></li>
           </ul>
-        </div>
+        </section>
 
-        <div class="section">
-          <div class="section-title">Skills</div>
+        <section class="section">
+          <h2 class="section-title">Skills</h2>
           <div>
-            
             <span class="skill">HTML</span>
             <span class="skill">CSS</span>
-            <span class="skill">JAVASCRIPT</span>
-            <span class="skill">JAVA</span>
-            <span class="skill">FIGMA(Tools)</span>
-            <span class="skill">ADVANCE EXCEL</span>
-            <span class="skill"></span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Java</span>
+            <span class="skill">Figma</span>
+            <span class="skill">Advanced Excel</span>
           </div>
-        </div>
+        </section>
 
-        <div class="section">
-          <div class="section-title">Tools</div>
-          <p style="font-size:14px; color:#333;">VS Code, Github , FigmaTools</p>
-        </div>
+        <section class="section">
+          <h2 class="section-title">Tools</h2>
+          <p style="font-size: 1rem; color: #333; font-weight: 600;">VS Code, GitHub, Figma</p>
+        </section>
       </aside>
 
-     <section class="content" aria-label="Main resume content">
-        <div>
-          <h2>Professional Summary</h2>
-          <p>I am currently studying for a Bachelor of Science in Information Technology. I have experience building websites and solving algorithm problems, and I am comfortable working with Java, C/C++, JavaScript, and fundamental web technologies. I am eager to learn and build real-world applications to further develop my skills and knowledge.
+      <section class="content" role="region" aria-label="Main Resume Content">
+        <article class="section" aria-labelledby="professionalSummaryHeading">
+          <h2 id="professionalSummaryHeading">Professional Summary</h2>
+          <p>
+            I am currently pursuing a Bachelor of Science in Information Technology. I have experience building websites and solving algorithm problems. I am comfortable working with Java, C/C++, JavaScript, and fundamental web technologies. I am eager to learn and build real-world applications to develop my skills further.
           </p>
-        </div>
+        </article>
 
-        <div>
-          <h2>Education</h2>
+        <article class="section" aria-labelledby="educationHeading">
+          <h2 id="educationHeading">Education</h2>
           <p><strong>The American College</strong> — Bachelor of Science in Information Technology (B.Sc.IT)<br>Currently pursuing.</p>
-        </div>
+        </article>
       </section>
+
     </div>
+  </main>
 
-      </div>
-  
-<script>
-function downloadResume() {
-    const link = document.createElement('a');
-    link.href = 'Ganeshram S resume.pdf';    
-    link.download = 'Ganeshram S resume.pdf'; 
-    link.click();
-
-}
-</script>
+  <script>
+    // Download button behavior
+    function downloadResume() {
+      const link = document.createElement('a');
+      // Replace the URL below with your actual PDF file's URL or relative path
+      link.href = 'Ganeshram S resume.pdf';
+      link.download = 'Ganeshram S resume.pdf';
+      link.click();
+    }
+  </script>
 </body>
-
 </html>
