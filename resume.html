@@ -15,46 +15,48 @@
       padding: 20px;
       min-height: 100vh;
     }
-
-    /* Header and navigation */
     header {
-      background: linear-gradient(135deg, #007bff, #00d4ff);
-      padding: 20px 30px;
-      border-radius: 15px 15px 0 0;
-      box-shadow: 0 5px 20px rgba(0,123,255,0.3);
-    }
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            padding: 15px 30px;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 8px 25px rgba(0,123,255,0.3);
+        }
 
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      gap: 30px;
-    }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
 
-    nav a {
-      color: #ff3c60;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-    nav a:hover {
-      color: #3cb371; /* green on hover */
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #3cb371;
-      left: 50%;
-      bottom: -5px;
-      transition: width 0.3s ease, left 0.3s ease;
-    }
-    nav a:hover::after {
-      width: 100%;
-      left: 0;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+            transform: translateY(-2px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #ffeb3b;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
 
     /* Container */
     .container {
@@ -283,4 +285,5 @@
   </script>
 </body>
 </html>
+
 
