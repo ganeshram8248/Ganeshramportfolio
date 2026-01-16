@@ -31,6 +31,22 @@
             overflow: hidden; backdrop-filter: blur(10px);
         }
 
+
+        nav {
+            background: rgba(248, 249, 250, 0.95); padding: 15px;
+            text-align: center; backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: var(--accent); text-decoration: none; margin: 0 15px;
+            font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease;
+            padding: 8px 16px; border-radius: 20px;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+
+        nav a:hover {
+            background: var(--accent); color: white; transform: translateY(-2px);
+        }
         header {
             background: var(--header-bg); color: white;
             padding: 30px 20px; text-align: center; position: relative;
@@ -374,4 +390,5 @@
     </script>
 </body>
 </html>
+
 
