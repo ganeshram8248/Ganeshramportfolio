@@ -1,289 +1,357 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ganeshram S — Resume</title>
-  <style>
-    /* Reset and base */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #a2c0ff 0%, #f0eaff 100%);
-      color: #3a3a3a;
-      padding: 20px;
-      min-height: 100vh;
-    }
-    header {
-            background: linear-gradient(135deg, #007bff, #00d4ff);
-            padding: 15px 30px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganeshram S - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            --header-bg: linear-gradient(135deg, #007bff, #00d4ff);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-dark: #1a1a2e;
+            --text-light: #555;
+            --accent: #007bff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--primary-bg);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 20px 30px;
             border-radius: 15px 15px 0 0;
-            box-shadow: 0 8px 25px rgba(0,123,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,123,255,0.4);
         }
 
         nav {
             display: flex;
             justify-content: flex-end;
-            gap: 30px;
+            gap: 20px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 25px;
             transition: all 0.3s ease;
-            position: relative;
+            background: rgba(255,255,255,0.1);
         }
 
         nav a:hover {
+            background: rgba(255,235,59,0.3);
             color: #ffeb3b;
-            transform: translateY(-2px);
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background: #ffeb3b;
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--card-bg);
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            border-bottom: 3px solid #eef2f7;
+            background: rgba(248,250,252,0.8);
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #dc143c, #ff416c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #0066cc, #00a0ff);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,102,204,0.4);
             transition: all 0.3s ease;
         }
 
-        nav a:hover::after {
-            width: 100%;
-            left: 0;
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,102,204,0.5);
         }
 
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: -8px auto 40px;
-      background: #fff;
-      border-radius: 0 0 15px 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding-bottom: 30px;
-    }
+        .main {
+            display: block;
+            padding: 30px 40px;
+        }
 
-    /* Custom header inside container */
-    aheader {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 30px;
-      border-bottom: 2px solid #eef2f7;
-    }
-    .name {
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: #dc143c; /* crimson */
-    }
-    .subtitle {
-      color: #556;
-      font-size: 1rem;
-      margin-top: 6px;
-      font-weight: 600;
-    }
-    .btn {
-      background: #0066cc;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 7px 20px rgba(0,102,204,0.4);
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background: #004a99;
-    }
+        @media (min-width: 900px) {
+            .main {
+                display: grid;
+                grid-template-columns: 320px 1fr;
+                gap: 50px;
+                padding: 40px;
+            }
+        }
 
-    /* Main layout with sidebar and content */
-    .main {
-      display: block;
-      padding: 24px 30px;
-    }
-    @media (min-width: 780px) {
-      .main {
-        display: grid;
-        grid-template-columns: 280px 1fr;
-        gap: 40px;
-      }
-    }
+        .sidebar {
+            border-right: none;
+        }
 
-    /* Sidebar styles */
-    .sidebar {
-      border-right: none;
-      padding-right: 0;
-    }
-    @media (min-width: 780px) {
-      .sidebar {
-        border-right: 2px solid #eef2f7;
-        padding-right: 30px;
-      }
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .section-title {
-      font-size: 0.85rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-      border-left: 4px solid #00b050;
-      padding-left: 10px;
-    }
-    ul.contact {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul.contact li {
-      margin-bottom: 12px;
-      font-size: 1rem;
-      color: #333;
-      font-weight: 600;
-      border-bottom: 1px dotted #e0e0e0;
-      padding-bottom: 6px;
-    }
+        @media (min-width: 900px) {
+            .sidebar {
+                border-right: 3px solid #eef2f7;
+                padding-right: 40px;
+            }
+        }
 
-    /* Skill pill styling */
-    .skill {
-      display: inline-block;
-      background: #d0e9ff;
-      padding: 8px 14px;
-      margin: 5px 8px 0 0;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #0b63d6;
-      box-shadow: 0 3px 8px rgba(11, 99, 214, 0.3);
-      cursor: default;
-      user-select: none;
-      transition: background-color 0.3s ease;
-    }
-    .skill:hover {
-      background: #00a0ff;
-      color: white;
-      box-shadow: 0 6px 14px rgba(0,160,255,0.6);
-    }
+        .section {
+            margin-bottom: 35px;
+        }
 
-    .section p {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-    .project {
-      border-left: 4px solid #d0e9ff;
-      background: #f5faff;
-      padding: 12px 14px;
-      border-radius: 6px;
-      margin-bottom: 18px;
-      color: #222;
-    }
+        .section-title {
+            font-size: 0.9rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #00b050;
+            background: linear-gradient(90deg, #f0f9f0, transparent);
+        }
 
-    /* Print styles */
-    @media print {
-      body {
-        background: white;
-      }
-      .container {
-        box-shadow: none;
-        border-radius: 0;
-      }
-      nav, .btn {
-        display: none;
-      }
-    }
-  </style>
+        ul.contact li {
+            margin-bottom: 18px;
+            padding: 15px;
+            background: rgba(208,233,255,0.3);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        ul.contact li strong {
+            color: var(--accent);
+        }
+
+        ul.contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .skill-group {
+            background: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent);
+        }
+
+        .skill-group h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #d0e9ff, #a0d8ff);
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #0b63d6;
+        }
+
+        .tools {
+            background: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9500;
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .content .section h2 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .content .section p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .resume-header { 
+                flex-direction: column; 
+                gap: 20px; 
+                padding: 25px 20px; 
+                text-align: center; 
+            }
+            .name { font-size: 2.2rem; }
+            nav { justify-content: center; flex-wrap: wrap; gap: 10px; }
+            nav a { padding: 12px 16px; flex: 1 1 100px; text-align: center; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav role="navigation" aria-label="Primary Navigation">
-      <a href="index.html">HOME</a>
-      <a href="About.html">ABOUT</a>
-      <a href="resume.html">RESUME</a>
-      <a href="contact.html">CONTACT US</a>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="About.html">About</a>
+            
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <main class="container" role="main" aria-labelledby="resumeTitle">
-    <aheader>
-      <div>
-        <div id="resumeTitle" class="name">Ganeshram S</div>
-        <div class="subtitle">B.Sc. IT Student — Web Developer & Web Designer</div>
-      </div>
-      <div>
-        <button class="btn" onclick="downloadResume()" aria-label="Download Resume PDF">Download Resume</button>
-      </div>
-    </aheader>
+    <div class="container">
+        <div class="resume-header">
+            <div>
+                <div class="name">Ganeshram S</div>
+                <div class="subtitle">B.Sc. IT Student | Web Developer</div>
+            </div>
+            <button class="download-btn" onclick="downloadResume()">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+        </div>
 
-    <div class="main">
-      
-      <aside class="sidebar" role="complementary" aria-label="Contact and Skills">
-        <section class="section">
-          <h2 class="section-title">Contact</h2>
-          <ul class="contact">
-            <li><strong>Email:</strong> <a href="mailto:ganeshram8248@gmail.com" style="color:#0066cc;">ganeshram8248@gmail.com</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+918248703979" style="color:#0066cc;">+91 8248703979</a></li>
-            <li><strong>Location:</strong> Madurai, India</li>
-            <li><strong>Portfolio:</strong> <a href="https://ganeshramportfolio.vercel.app/" target="_blank" rel="noopener" style="color:#0066cc;">ganeshramportfolio.com</a></li>
-          </ul>
-        </section>
+        <div class="main">
+            <aside class="sidebar">
+                <section class="section">
+                    <h2 class="section-title">Contact Information</h2>
+                    <ul class="contact">
+                        <li><strong>Email:</strong> <a href="mailto:ganeshram8248@gmail.com">ganeshram8248@gmail.com</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+918248703979">+91 8248703979</a></li>
+                        <li><strong>Location:</strong> Madurai, Tamil Nadu, India</li>
+                        <li><strong>Portfolio:</strong> <a href="https://ganeshramportfolio.vercel.app/" target="_blank">Live Portfolio</a></li>
+                    </ul>
+                </section>
 
-        <section class="section">
-          <h2 class="section-title">Skills</h2>
-          <div>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Java</span>
-            <span class="skill">Figma</span>
-            <span class="skill">Excel</span>
-          </div>
-        </section>
+                <section class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-container">
+                        <div class="skill-group">
+                            <h4>Strong Proficiency</h4>
+                            <div class="skill-list">
+                                <span class="skill">HTML5</span>
+                                <span class="skill">CSS3</span>
+                                <span class="skill">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Working Knowledge</h4>
+                            <div class="skill-list">
+                                <span class="skill">Java</span>
+                                <span class="skill">Python</span>
+                                <span class="skill">C</span>
+                                <span class="skill">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="section">
-          <h2 class="section-title">Tools</h2>
-          <p style="font-size: 1rem; color: #333; font-weight: 600;">VS Code, GitHub, Figma</p>
-        </section>
-      </aside>
+                <section class="section">
+                    <h2 class="section-title">Development Tools</h2>
+                    <div class="tools">
+                        GitHub • Lovable AI • Rocket AI • Blot AI • Figma • VS Code • Vercel
+                    </div>
+                </section>
+            </aside>
 
-      <section class="content" role="region" aria-label="Main Resume Content">
-        <article class="section" aria-labelledby="professionalSummaryHeading">
-          <h2 id="professionalSummaryHeading">Professional Summary</h2>
-          <p>
-            Ganeshram, 2nd-year B.Sc. Information Technology student at The American College, pursuing a Bachelor of Science in IT. Experienced in building websites, solving algorithm problems, and working with HTML, CSS, JavaScript, Figma for web design/development, plus basic knowledge of Java, C/C++, and C language. Completed UI/UX and Fullstack certificates from Novitech; eager to apply these skills in real-world projects for hands-on experience and further growth.       </p>
-        </article>
+            <div class="content">
+                <section class="section">
+                    <h2>Professional Summary</h2>
+                    <p>
+                        Motivated B.Sc. Information Technology student (2nd year) at The American College, Madurai, with strong proficiency in modern web development technologies including HTML5, CSS3, and JavaScript. Demonstrated ability to build responsive websites and deploy projects using Vercel. 
+                    </p>
+                    <p>
+                        Developing foundational skills in Java and Python programming alongside working knowledge of C and C++. Experienced with cutting-edge AI development tools including Lovable AI, Rocket AI, and Blot AI for rapid prototyping. Proficient in Figma for UI/UX design and GitHub for version control. Completed professional UI/UX and Fullstack development certifications from Novitech.
+                    </p>
+                </section>
 
-        <article class="section" aria-labelledby="educationHeading">
-          <h2 id="educationHeading">Education</h2>
-          <p><strong>The American College</strong> — Bachelor of Science in Information Technology (B.Sc.IT)<br>Currently pursuing.</p>
-        </article>
-      </section>
+                <section class="section">
+                    <h2>Education</h2>
+                    <div style="background: rgba(208,233,255,0.3); padding: 25px; border-radius: 15px; border-left: 5px solid var(--accent);">
+                        <h3 style="color: var(--accent); margin-bottom: 10px; font-size: 1.3rem;">The American College, Madurai</h3>
+                        <p><strong>Bachelor of Science in Information Technology (B.Sc. IT)</strong><br>
+                        Currently pursuing - 2nd Year • Expected Graduation: 2026</p>
+                    </div>
+                </section>
 
+                <section class="section">
+                    <h2>Certifications</h2>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li>UI/UX Design Certification - Novitech</li>
+                        <li>Fullstack Web Development - Novitech</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <script>
-    // Download button behavior
-    function downloadResume() {
-      const link = document.createElement('a');
-      // Replace the URL below with your actual PDF file's URL or relative path
-      link.href = 'Ganeshram S resume.pdf';
-      link.download = 'Ganeshram S resume.pdf';
-      link.click();
-    }
-  </script>
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = '#';
+            link.download = 'Ganeshram_S_Resume.pdf';
+            link.click();
+            
+            const btn = document.querySelector('.download-btn');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+            btn.style.background = '#28a745';
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.style.background = 'linear-gradient(135deg, #0066cc, #00a0ff)';
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
-
-
-
